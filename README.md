@@ -1,7 +1,7 @@
 # QuickShop-PriceGuide Addon
 
-![Build Status](https://github.com/USERNAME/QuickShopPriceGuide/actions/workflows/build.yml/badge.svg)
-![Release Status](https://github.com/USERNAME/QuickShopPriceGuide/actions/workflows/release.yml/badge.svg)
+![Build Status](https://github.com/xydesu/QuickShopPriceGuide/actions/workflows/build.yml/badge.svg)
+![Release Status](https://github.com/xydesu/QuickShopPriceGuide/actions/workflows/release.yml/badge.svg)
 
 QuickShop-PriceGuide 是一個專為 [QuickShop-Hikari](https://github.com/QuickShop-Community/QuickShop-Hikari) 設計的伺服器擴充套件 (Addon)。當玩家在您的伺服器上建立商店時，它會根據您提供的市場經濟資料表，自動在聊天框提示推薦的「收購」與「出售」價格，讓伺服器經濟更穩定、新手開店更輕鬆！
 
@@ -22,7 +22,7 @@ QuickShop-PriceGuide 是一個專為 [QuickShop-Hikari](https://github.com/Quick
 - 已安裝 [QuickShop-Hikari](https://github.com/QuickShop-Community/QuickShop-Hikari) (前置插件)
 
 ### 2. 安裝步驟
-1. 進入本專案的 [Releases 頁面](https://github.com/USERNAME/QuickShopPriceGuide/releases)，下載最新版的 `QuickShopPriceGuide-x.x.x.jar`。
+1. 進入本專案的 [Releases 頁面](https://github.com/xydesu/QuickShopPriceGuide/releases)，下載最新版的 `QuickShopPriceGuide-x.x.x.jar`。
 2. 將 `.jar` 檔案放入您伺服器的 `plugins/` 資料夾中。
 3. 啟動伺服器，讓外掛生成設定檔。
 4. 前往 [Minecraft Economy Price Guide](https://minecraft-economy-price-guide.net/) 網站，下載您的市場價格 JSON 資料表。
