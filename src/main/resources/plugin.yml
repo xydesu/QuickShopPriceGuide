@@ -1,0 +1,11 @@
+name: QuickShopPriceGuide
+version: '1.0-SNAPSHOT'
+main: me.xydesu.priceguide.PriceGuidePlugin
+api-version: '1.13'
+depend: [QuickShop-Hikari]
+authors: [xydesu]
+description: Recommends prices when creating QuickShop shops based on economy price guide.
+commands:
+  priceguide:
+    description: QuickShopPriceGuide main command.
+    aliases: [pg]
