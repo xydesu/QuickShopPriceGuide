@@ -52,7 +52,7 @@ messages:
 
 本專案使用 Maven 進行依賴管理與編譯。若您想自行編譯或貢獻程式碼：
 
-1. 複製本專案：`git clone https://github.com/USERNAME/QuickShopPriceGuide.git`
+1. 複製本專案：`git clone https://github.com/xydesu/QuickShopPriceGuide.git`
 2. 進入資料夾：`cd QuickShopPriceGuide`
 3. 使用 Maven 編譯：`mvn clean package`
 4. 編譯出的 `.jar` 檔案會位於 `target/` 目錄中。
