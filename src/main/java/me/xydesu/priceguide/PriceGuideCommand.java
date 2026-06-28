@@ -26,7 +26,7 @@ public class PriceGuideCommand implements CommandExecutor {
                 return true;
             }
             priceManager.loadPrices();
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("messages.reloaded", "&a[系統] 價格表已重新載入！")));
+            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("messages.reloaded", "&8[&b市價指南&8] &a價格表已成功重新載入！")));
             return true;
         }
 
@@ -41,7 +41,7 @@ public class PriceGuideCommand implements CommandExecutor {
         if (args.length == 0) {
             ItemStack item = player.getInventory().getItemInMainHand();
             if (item.getType() == Material.AIR) {
-                player.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("messages.usage", "&c用法: /priceguide <reload|物品名稱>")));
+                player.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("messages.usage", "&8[&b市價指南&8] &c用法: &f/priceguide <reload|物品名稱>")));
                 return true;
             }
             itemName = item.getType().name().toLowerCase();
@@ -54,7 +54,7 @@ public class PriceGuideCommand implements CommandExecutor {
             double sellPrice = priceData.unitSell * priceManager.getGlobalSellMultiplier();
             double buyPrice = priceData.unitBuy * priceManager.getGlobalBuyMultiplier();
             
-            String msgUnit = plugin.getConfig().getString("messages.recommendation_unit", "&a[系統] 單個推薦 - 出售: $%sell% | 收購: $%buy%");
+            String msgUnit = plugin.getConfig().getString("messages.recommendation_unit", "&8[&b市價指南&8] &7單個推薦 &8» &f出售: &a$%sell% &8| &f收購: &c$%buy%");
             player.sendMessage(ChatColor.translateAlternateColorCodes('&', msgUnit
                     .replace("%sell%", String.format("%.2f", sellPrice))
                     .replace("%buy%", String.format("%.2f", buyPrice))));
@@ -62,13 +62,13 @@ public class PriceGuideCommand implements CommandExecutor {
             if (priceData.stackSell > 0 || priceData.stackBuy > 0) {
                 double stackSellPrice = priceData.stackSell * priceManager.getGlobalSellMultiplier();
                 double stackBuyPrice = priceData.stackBuy * priceManager.getGlobalBuyMultiplier();
-                String msgStack = plugin.getConfig().getString("messages.recommendation_stack", "&a[系統] 整組推薦 - 出售: $%sell% | 收購: $%buy%");
+                String msgStack = plugin.getConfig().getString("messages.recommendation_stack", "&8[&b市價指南&8] &7整組推薦 &8» &f出售: &a$%sell% &8| &f收購: &c$%buy%");
                 player.sendMessage(ChatColor.translateAlternateColorCodes('&', msgStack
                         .replace("%sell%", String.format("%.2f", stackSellPrice))
                         .replace("%buy%", String.format("%.2f", stackBuyPrice))));
             }
         } else {
-            String noDataMsg = plugin.getConfig().getString("messages.no_data", "&c[系統] 找不到此物品的推薦價格。");
+            String noDataMsg = plugin.getConfig().getString("messages.no_data", "&8[&b市價指南&8] &c目前尚未有此物品的推薦價格資料。");
             player.sendMessage(ChatColor.translateAlternateColorCodes('&', noDataMsg));
         }
 

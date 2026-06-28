@@ -6,9 +6,9 @@ settings:
   tax_rate: 0.05 # 例如 5% 的稅，推薦出售價格會乘以 1.05
 
 messages:
-  recommendation_unit: "&a[系統] 單個推薦 - 出售: $%sell% | 收購: $%buy%"
-  recommendation_stack: "&a[系統] 整組推薦 - 出售: $%sell% | 收購: $%buy%"
-  auto_hint: "&e[系統] 提示：輸入 &bauto &e即可快速使用單個推薦價！"
-  no_data: "&c[系統] 找不到此物品的推薦價格。"
-  reloaded: "&a[系統] 價格表已重新載入！"
-  usage: "&c用法: /priceguide <reload|物品名稱>"
+  recommendation_unit: "&8[&b市價指南&8] &7單個推薦 &8» &f出售: &a$%sell% &8| &f收購: &c$%buy%"
+  recommendation_stack: "&8[&b市價指南&8] &7整組推薦 &8» &f出售: &a$%sell% &8| &f收購: &c$%buy%"
+  auto_hint: "&8[&b市價指南&8] &e💡 小提示：在聊天框輸入 &bauto &e即可快速套用推薦價格！"
+  no_data: "&8[&b市價指南&8] &c目前尚未有此物品的推薦價格資料。"
+  reloaded: "&8[&b市價指南&8] &a價格表已成功重新載入！"
+  usage: "&8[&b市價指南&8] &c用法: &f/priceguide <reload|物品名稱>"

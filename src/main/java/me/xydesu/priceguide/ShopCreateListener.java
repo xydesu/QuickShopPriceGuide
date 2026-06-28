@@ -56,7 +56,7 @@ public class ShopCreateListener implements Listener {
             double sellPrice = priceData.unitSell * priceManager.getGlobalSellMultiplier();
             double buyPrice = priceData.unitBuy * priceManager.getGlobalBuyMultiplier();
             
-            String msgUnit = plugin.getConfig().getString("messages.recommendation_unit", "&a[系統] 單個推薦 - 出售: $%sell% | 收購: $%buy%");
+            String msgUnit = plugin.getConfig().getString("messages.recommendation_unit", "&8[&b市價指南&8] &7單個推薦 &8» &f出售: &a$%sell% &8| &f收購: &c$%buy%");
             player.sendMessage(ChatColor.translateAlternateColorCodes('&', msgUnit
                     .replace("%sell%", String.format("%.2f", sellPrice))
                     .replace("%buy%", String.format("%.2f", buyPrice))));
@@ -64,7 +64,7 @@ public class ShopCreateListener implements Listener {
             if (priceData.stackSell > 0 || priceData.stackBuy > 0) {
                 double stackSellPrice = priceData.stackSell * priceManager.getGlobalSellMultiplier();
                 double stackBuyPrice = priceData.stackBuy * priceManager.getGlobalBuyMultiplier();
-                String msgStack = plugin.getConfig().getString("messages.recommendation_stack", "&a[系統] 整組推薦 - 出售: $%sell% | 收購: $%buy%");
+                String msgStack = plugin.getConfig().getString("messages.recommendation_stack", "&8[&b市價指南&8] &7整組推薦 &8» &f出售: &a$%sell% &8| &f收購: &c$%buy%");
                 player.sendMessage(ChatColor.translateAlternateColorCodes('&', msgStack
                         .replace("%sell%", String.format("%.2f", stackSellPrice))
                         .replace("%buy%", String.format("%.2f", stackBuyPrice))));
