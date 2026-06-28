@@ -1,0 +1,14 @@
+multipliers:
+  sell: 1.0
+  buy: 1.0
+
+settings:
+  tax_rate: 0.05 # 例如 5% 的稅，推薦出售價格會乘以 1.05
+
+messages:
+  recommendation_unit: "&a[系統] 單個推薦 - 出售: $%sell% | 收購: $%buy%"
+  recommendation_stack: "&a[系統] 整組推薦 - 出售: $%sell% | 收購: $%buy%"
+  auto_hint: "&e[系統] 提示：輸入 &bauto &e即可快速使用單個推薦價！"
+  no_data: "&c[系統] 找不到此物品的推薦價格。"
+  reloaded: "&a[系統] 價格表已重新載入！"
+  usage: "&c用法: /priceguide <reload|物品名稱>"
