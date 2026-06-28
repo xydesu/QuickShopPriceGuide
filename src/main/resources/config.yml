@@ -8,7 +8,7 @@ settings:
 messages:
   recommendation_unit: "&8[&b市價指南&8] &7單個推薦 &8» &f出售: &a$%sell% &8| &f收購: &c$%buy%"
   recommendation_stack: "&8[&b市價指南&8] &7整組推薦 &8» &f出售: &a$%sell% &8| &f收購: &c$%buy%"
-  auto_hint: "&8[&b市價指南&8] &e💡 小提示：在聊天框輸入 &bauto &e即可快速套用推薦價格！"
+  auto_hint: "&8[&b市價指南&8] &e💡 小提示：在聊天框輸入 &b/auto &e即可快速套用推薦價格！"
   no_data: "&8[&b市價指南&8] &c目前尚未有此物品的推薦價格資料。"
   reloaded: "&8[&b市價指南&8] &a價格表已成功重新載入！"
   usage: "&8[&b市價指南&8] &c用法: &f/priceguide <reload|物品名稱>"

@@ -3,7 +3,7 @@ package me.xydesu.priceguide;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.AsyncPlayerChatEvent;
+import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 
 public class ChatInterceptor implements Listener {
 
@@ -14,11 +14,15 @@ public class ChatInterceptor implements Listener {
     }
 
     @EventHandler(priority = EventPriority.LOWEST)
-    public void onPlayerChat(AsyncPlayerChatEvent event) {
-        if (event.getMessage().trim().equalsIgnoreCase("auto") || event.getMessage().trim().equalsIgnoreCase("rec")) {
+    public void onPlayerCommand(PlayerCommandPreprocessEvent event) {
+        if (event.getMessage().trim().equalsIgnoreCase("/auto") || event.getMessage().trim().equalsIgnoreCase("/rec")) {
             Double pendingPrice = plugin.getPendingPrices().get(event.getPlayer().getUniqueId());
             if (pendingPrice != null) {
-                event.setMessage(String.valueOf(pendingPrice));
+                event.setCancelled(true);
+                // 讓玩家自動說出價格，這樣 QuickShop 就能正確攔截到數字
+                org.bukkit.Bukkit.getScheduler().runTask(plugin, () -> {
+                    event.getPlayer().chat(String.valueOf(pendingPrice));
+                });
                 plugin.getPendingPrices().remove(event.getPlayer().getUniqueId());
             }
         }
