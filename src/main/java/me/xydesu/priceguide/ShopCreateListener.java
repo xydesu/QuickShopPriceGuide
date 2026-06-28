@@ -44,10 +44,7 @@ public class ShopCreateListener implements Listener {
             return;
         }
 
-        // 檢查事件是否被 QuickShop 取消
-        if (!event.isCancelled()) {
-            return;
-        }
+
 
         String itemName = item.getType().name().toLowerCase();
         PriceManager.PriceData priceData = priceManager.getPrice(itemName);
