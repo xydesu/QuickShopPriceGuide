@@ -59,7 +59,10 @@ public class PriceGuideCommand implements CommandExecutor {
                     .replace("%sell%", String.format("%.2f", sellPrice))
                     .replace("%buy%", String.format("%.2f", buyPrice))));
 
-            if (priceData.stackSell > 0 || priceData.stackBuy > 0) {
+            Material material = Material.matchMaterial(itemName);
+            boolean isStackable = material != null ? material.getMaxStackSize() > 1 : true;
+
+            if (isStackable && (priceData.stackSell > 0 || priceData.stackBuy > 0)) {
                 double stackSellPrice = priceData.stackSell * priceManager.getGlobalSellMultiplier();
                 double stackBuyPrice = priceData.stackBuy * priceManager.getGlobalBuyMultiplier();
                 String msgStack = plugin.getConfig().getString("messages.recommendation_stack", "&8[&b市價指南&8] &7整組推薦 &8» &f出售: &a$%sell% &8| &f收購: &c$%buy%");
